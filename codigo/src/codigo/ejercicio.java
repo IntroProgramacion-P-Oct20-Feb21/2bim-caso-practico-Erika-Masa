@@ -39,24 +39,28 @@ public class ejercicio {
             opcion = entrada.nextInt();
             if(opcion == 1){
                 facebook = crearFacebook();
+                System.out.println(facebook);
             }else{
                 if(opcion == 2){
                     crearTwitter();
                 }else{
                     if(opcion == 3){
                         whatsapp = crearWhatsapp();
+                        System.out.println(whatsapp);
                     }else{
                         if(opcion == 4){
                             crearTelegram();
                         }else{
                             if(opcion == 5){
                                 signal = crearSignal();
+                                System.out.println(signal);
                             }else{
                                 if(opcion == 6){
                                     crearInstagram();
                                 }else{
                                     if(opcion == 7){
                                         flickr = crearFlickr();
+                                        System.out.println(flickr);
                                     }else{
                                         System.out.println("Opcion incorrecta");
                                     }
@@ -67,7 +71,8 @@ public class ejercicio {
                 }
             }
             if ((opcion >= 1) && (opcion <= 7)){
-                contador = contador + 1;
+            
+               contador = contador + 1;
             }
             entrada.nextLine();
             System.out.println("Ponga si para dejar de crear cuentas");
@@ -75,9 +80,9 @@ public class ejercicio {
             salida = sa.toLowerCase();
             if(salida.equals("si")){
                 bandera = false;
+               
             }
         }
-        System.out.printf(facebook + whatsapp + signal + flickr);
         obtenerMensaje(contador);
         String cadena = obtenerMensaje(contador);
         System.out.println(cadena);  
